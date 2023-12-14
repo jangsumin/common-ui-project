@@ -9,3 +9,7 @@
 
 ## 게시판 - `PostContainer.jsx`
 ![image](https://github.com/jangsumin/common-ui-project/assets/29765842/718550c6-f5b7-4932-9a22-215d17175cb0)
+
+---
+## 1일차
+![image](https://github.com/jangsumin/common-ui-project/assets/29765842/dbb5d76d-34c2-4fb6-80e1-4ed79e9c388c)
