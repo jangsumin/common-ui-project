@@ -88,20 +88,20 @@ function PostContainer() {
       {/* 여기에 제목, 태그 검색창 들어가야 함 */}
       <PostSearch>
         <SearchInput
-          inputHeight="48px"
-          placeholderText="궁금한 질문을 검색해보세요!"
+          height="48px"
+          placeholder="궁금한 질문을 검색해보세요!"
         ></SearchInput>
         <Button
-          buttonHeight="48px"
+          height="48px"
           buttonText="검색"
           buttonColor="#e30000"
-          textColor="#ffffff"
+          color="#ffffff"
         ></Button>
         <SearchInput
-          inputHeight="48px"
-          placeholderText="태그로 검색해보세요!"
+          height="48px"
+          placeholder="태그로 검색해보세요!"
         ></SearchInput>
-        <Button buttonHeight="48px" buttonText="초기화"></Button>
+        <Button height="48px" buttonText="초기화"></Button>
       </PostSearch>
 
       <PostList>

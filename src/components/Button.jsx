@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const ButtonContainer = styled.button`
-  width: ${(props) => (props.buttonWidth ? props.buttonWidth : "inherit")};
-  height: ${(props) => (props.buttonHeight ? props.buttonHeight : "inherit")};
+  width: ${(props) => (props.$width ? props.$width : "inherit")};
+  height: ${(props) => (props.$height ? props.$height : "inherit")};
   background-color: ${(props) =>
-    props.buttonColor ? props.buttonColor : "inherit"};
-  color: ${(props) => (props.textColor ? props.textColor : "#000000")};
+    props.$buttonColor ? props.$buttonColor : "inherit"};
+  color: ${(props) => (props.$color ? props.$color : "#000000")};
   cursor: pointer;
   align-self: center;
   box-sizing: border-box;
@@ -16,15 +16,14 @@ const ButtonContainer = styled.button`
 `;
 
 function Button(props) {
-  const { buttonWidth, buttonHeight, buttonText, buttonColor, textColor } =
-    props;
+  const { width, height, buttonText, buttonColor, color } = props;
 
   return (
     <ButtonContainer
-      buttonWidth={buttonWidth}
-      buttonHeight={buttonHeight}
-      buttonColor={buttonColor}
-      textColor={textColor}
+      $width={width}
+      $height={height}
+      $color={color}
+      $buttonColor={buttonColor}
     >
       {buttonText}
     </ButtonContainer>

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Input = styled.input`
-  width: ${(props) => (props.inputWidth ? props.inputWidth : "inherit")};
-  height: ${(props) => (props.inputHeight ? props.inputHeight : "inherit")};
+  width: ${(props) => (props.$width ? props.$width : "inherit")};
+  height: ${(props) => (props.$height ? props.$height : "inherit")};
   align-self: center;
   box-sizing: border-box;
   display: block;
@@ -19,14 +19,10 @@ const Input = styled.input`
 `;
 
 function SearchInput(props) {
-  const { inputWidth, inputHeight, placeholderText } = props;
+  const { width, height, placeholder } = props;
 
   return (
-    <Input
-      placeholder={placeholderText}
-      inputWidth={inputWidth}
-      inputHeight={inputHeight}
-    ></Input>
+    <Input placeholder={placeholder} $width={width} $height={height}></Input>
   );
 }
 
