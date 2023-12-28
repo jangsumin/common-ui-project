@@ -61,6 +61,9 @@ function TagsInput() {
         setTagItem("");
       }
     }
+  };
+
+  const onKeyDown = (event) => {
     if (
       tagItem.length === 0 &&
       tagList.length !== 0 &&
@@ -98,6 +101,7 @@ function TagsInput() {
         onChange={(event) => setTagItem(event.target.value)}
         value={tagItem}
         onKeyUp={onKeyUp}
+        onKeyDown={onKeyDown}
       ></TagInput>
     </TagsInputWrapper>
   );
