@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Button = styled.button`
+const ButtonWrapper = styled.button`
   cursor: pointer;
   box-sizing: border-box;
   padding: 4px 8px;
@@ -11,7 +11,7 @@ const Button = styled.button`
 `;
 
 function Tag({ tag }) {
-  return <Button>{tag}</Button>;
+  return <ButtonWrapper>{tag}</ButtonWrapper>;
 }
 
 export default Tag;

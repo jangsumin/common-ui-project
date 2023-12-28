@@ -3,7 +3,7 @@ import HeaderMenu from "./HeaderMenu";
 
 const menu = ["게시판", "로그인", "로그아웃", "사용자"];
 
-const Header = styled.header`
+const HeaderWrapper = styled.header`
   box-sizing: border-box;
   width: 100%;
   height: 48px;
@@ -19,9 +19,9 @@ const HeaderLogo = styled.span`
   height: 48px;
 `;
 
-function AppHeader() {
+function Header() {
   return (
-    <Header>
+    <HeaderWrapper>
       <HeaderLogo>
         <svg
           height="48"
@@ -34,8 +34,8 @@ function AppHeader() {
       </HeaderLogo>
 
       <HeaderMenu menu={menu}></HeaderMenu>
-    </Header>
+    </HeaderWrapper>
   );
 }
 
-export default AppHeader;
+export default Header;

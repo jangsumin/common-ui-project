@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderMenuList = styled.ul`
+const HeaderMenuListWrapper = styled.ul`
   display: flex;
   gap: 15px;
 `;
@@ -13,11 +13,11 @@ function HeaderMenu(props) {
   const { menu } = props;
 
   return (
-    <HeaderMenuList>
+    <HeaderMenuListWrapper>
       {menu.map((item, idx) => {
         return <HeaderMenuItem key={idx}>{item}</HeaderMenuItem>;
       })}
-    </HeaderMenuList>
+    </HeaderMenuListWrapper>
   );
 }
 

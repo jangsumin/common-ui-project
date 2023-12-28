@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import SearchInput from "./SearchInput";
-import Button from "./Button";
+import Input from "../common/Input";
+import Button from "../common/Button";
 import PostItem from "./PostItem";
 
-const Container = styled.div`
+const PostWrapper = styled.div`
   box-sizing: border-box;
   width: 70%;
   min-width: 800px;
@@ -84,23 +84,17 @@ function PostContainer() {
   ];
 
   return (
-    <Container>
+    <PostWrapper>
       {/* 여기에 제목, 태그 검색창 들어가야 함 */}
       <PostSearch>
-        <SearchInput
-          height="48px"
-          placeholder="궁금한 질문을 검색해보세요!"
-        ></SearchInput>
+        <Input height="48px" placeholder="궁금한 질문을 검색해보세요!"></Input>
         <Button
           height="48px"
           buttonText="검색"
           buttonColor="#e30000"
           color="#ffffff"
         ></Button>
-        <SearchInput
-          height="48px"
-          placeholder="태그로 검색해보세요!"
-        ></SearchInput>
+        <Input height="48px" placeholder="태그로 검색해보세요!"></Input>
         <Button height="48px" buttonText="초기화"></Button>
       </PostSearch>
 
@@ -109,7 +103,7 @@ function PostContainer() {
           return <PostItem key={index} item={item}></PostItem>;
         })}
       </PostList>
-    </Container>
+    </PostWrapper>
   );
 }
 

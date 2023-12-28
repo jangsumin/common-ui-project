@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Tag from "./Tag";
+import Tag from "../common/Tag";
 
-const Item = styled.section`
+const ItemWrapper = styled.section`
   cursor: pointer;
   box-sizing: border-box;
   display: flex;
@@ -44,7 +44,7 @@ function PostItem(props) {
     props.item;
 
   return (
-    <Item>
+    <ItemWrapper>
       <Subject>{subject}</Subject>
       <Content>{content}</Content>
       <Tags>
@@ -61,7 +61,7 @@ function PostItem(props) {
           " ∙ " +
           `조회수 ${viewCount}`}
       </Info>
-    </Item>
+    </ItemWrapper>
   );
 }
 

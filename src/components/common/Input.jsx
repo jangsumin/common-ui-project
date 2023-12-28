@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Input = styled.input`
+const InputWrapper = styled.input`
   width: ${(props) => (props.$width ? props.$width : "inherit")};
   height: ${(props) => (props.$height ? props.$height : "inherit")};
   align-self: center;
@@ -22,7 +22,11 @@ function SearchInput(props) {
   const { width, height, placeholder } = props;
 
   return (
-    <Input placeholder={placeholder} $width={width} $height={height}></Input>
+    <InputWrapper
+      placeholder={placeholder}
+      $width={width}
+      $height={height}
+    ></InputWrapper>
   );
 }
 

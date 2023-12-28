@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonContainer = styled.button`
+const ButtonWrapper = styled.button`
   width: ${(props) => (props.$width ? props.$width : "inherit")};
   height: ${(props) => (props.$height ? props.$height : "inherit")};
   background-color: ${(props) =>
@@ -19,14 +19,14 @@ function Button(props) {
   const { width, height, buttonText, buttonColor, color } = props;
 
   return (
-    <ButtonContainer
+    <ButtonWrapper
       $width={width}
       $height={height}
       $color={color}
       $buttonColor={buttonColor}
     >
       {buttonText}
-    </ButtonContainer>
+    </ButtonWrapper>
   );
 }
 

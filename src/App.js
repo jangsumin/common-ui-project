@@ -1,16 +1,13 @@
-import "./App.css";
-import AppHeader from "./components/AppHeader";
-import AppMain from "./components/AppMain";
-import AppFooter from "./components/AppFooter";
+import Home from "./pages/Home";
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      {/* 여기에 header, main, footer 영역 작성하기 */}
-      <AppHeader></AppHeader>
-
-      <AppMain></AppMain>
-      <AppFooter></AppFooter>
+      <Routes>
+        <Route index element={<Home />}></Route>å
+      </Routes>
     </div>
   );
 }

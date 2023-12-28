@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Category = styled.section`
+const CategoryWrapper = styled.section`
   font-size: 12px;
 `;
 
@@ -20,14 +20,14 @@ function FooterCategory(props) {
   const { name, list } = props;
 
   return (
-    <Category>
+    <CategoryWrapper>
       <CategoryName>{name}</CategoryName>
       <CategoryList>
         {list.map((item, index) => {
           return <li key={index}>{item}</li>;
         })}
       </CategoryList>
-    </Category>
+    </CategoryWrapper>
   );
 }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import FooterCategory from "./FooterCategory";
 
-const Footer = styled.footer`
+const FooterWrapper = styled.footer`
   position: relative;
   box-sizing: border-box;
   width: 80%;
@@ -21,9 +21,9 @@ const FooterSmall = styled.small`
   font-size: 12px;
 `;
 
-function AppFooter() {
+function Footer() {
   return (
-    <Footer>
+    <FooterWrapper>
       <FooterCategory
         name="쇼핑 및 알아보기"
         list={[
@@ -80,8 +80,8 @@ function AppFooter() {
       <FooterSmall>
         Copyright &copy; 2023 Apple Inc. 모든 권리 보유.
       </FooterSmall>
-    </Footer>
+    </FooterWrapper>
   );
 }
 
-export default AppFooter;
+export default Footer;
